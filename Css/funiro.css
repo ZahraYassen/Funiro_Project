@@ -1,0 +1,158 @@
+/* Start Variables */
+:root {
+  --first-main-color: #f9f1e7;
+  --second-main-color: #fcf8f3;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding: 0 15px 0 15px;
+  margin: 0 auto 0 auto;
+}
+/* Smaal Screen */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium Screen */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large Screen */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+/* Start Header */
+.header {
+  padding: 1rem;
+  position: relative;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 100%;
+  background-color: var(--second-main-color);
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.left-background {
+  background-color: var(--first-main-color);
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo a {
+  font-size: 2rem;
+  color: black;
+}
+.nav-bar ul {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.nav-bar ul li {
+  list-style: none;
+  margin: 0 30px;
+}
+.nav-bar ul li a {
+  color: black;
+}
+.nav-bar ul li .arrow-icon::after {
+  position: absolute;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-left: 10px;
+}
+.searching {
+  position: relative;
+  margin-right: 20px;
+}
+.searching i {
+  position: absolute;
+  left: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.searching input {
+  padding: 0.25em 0em 0.25em 2em;
+  width: 120%;
+}
+.personalo-info {
+  display: flex;
+  align-items: center;
+}
+.personalo-info a {
+  color: black;
+  margin-right: 1em;
+}
+@media (max-width: 992px) {
+  .header .container {
+    flex-wrap: wrap;
+  }
+  .logo {
+    width: 50%;
+    margin-bottom: 10px;
+  }
+  .nav-bar {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .header .container {
+    text-align: center;
+  }
+  .logo {
+    width: 100%;
+  }
+  .nav-bar {
+    width: 100%;
+  }
+  .nav-bar ul {
+    justify-content: center;
+  }
+  .searching {
+    margin: 10px 0px;
+    left: 48%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+  .personalo-info {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* End Header */
